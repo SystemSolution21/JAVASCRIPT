@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Javascript</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+
+    <div>
+      <h1>Hello Javascript</h1>
+    </div>
+
+    <!--Regular function 'this' represents the object that calls the function-->
+    <div>
+      <h2>
+        Regular function 'this' represents the object that calls the function
+      </h2>
+      <button id="btn-reg-this" onclick="regFuncThis">
+        Click Regular Function this
+      </button>
+      <p id="reg-this"></p>
+    </div>
+
+    <!--Arrow function 'this' represents the owner of the function-->
+    <div>
+      <h2>Arrow function 'this' represents the owner of the function</h2>
+      <button id="btn-arr-this" onclick="arrFuncThis">
+        Click Arrow Function this
+      </button>
+      <p id="arr-this"></p>
+    </div>
+
+    <!--Undefined missing argument-->
+    <div>
+      <h2>Undefined missing argument</h2>
+      <p>
+        If a function is called with missing arguments (less than declared), the
+        missing values are set to undefined. Sometimes this is acceptable, but
+        sometimes it is better to assign a default value to the parameter:
+      </p>
+      <p id="undef-mis-args"></p>
+    </div>
+
+    <!--Default parameter values-->
+    <div>
+      <h2>Default parameter values</h2>
+      <p>Setting a default value to a function parameter.</p>
+      <p id="def-para"></p>
+    </div>
+
+    <!--Function Rest Parameter-->
+    <div>
+      <h2>Function Rest Parameter</h2>
+      <p>
+        The rest parameter (...) allows a function to treat an indefinite number
+        of arguments as an array:
+      </p>
+      <p id="res-para"></p>
+    </div>
+
+    <!--All Functions are methods-->
+    <div>
+      <h2>All Functions are methods</h2>
+      <p>
+        This example creates an object with 3 properties (firstName, lastName,
+        fullName). The fullName property is a method:
+      </p>
+      <p id="func-metd"></p>
+    </div>
+
+    <!--Predefined JavaScript call() method-->
+    <div>
+      <h2>Predefined JavaScript call() method</h2>
+      <p>
+        With call(), an object can use a method belonging to another object.
+      </p>
+      <p id="call-metd"></p>
+    </div>
+
+    <!--call() method with arguments-->
+    <div>
+      <h2>call() method with arguments:</h2>
+      <p>call() method can accept arguments.</p>
+      <p id="cal-met-arg"></p>
+    </div>
+
+    <!--apply() method with array as arguments-->
+    <div>
+      <h2>apply() method with array as arguments:</h2>
+      <p>
+        The apply() method is very handy if to use an array instead of an
+        argument list.
+      </p>
+      <p id="apl-met-ary"></p>
+    </div>
+
+    <!--JavaScript Function bind()-->
+    <div>
+      <h2>
+        With the bind() method, an object can borrow a method from another
+        object.
+      </h2>
+      <p>The member object borrows the fullName() method from person:</p>
+      <p id="bind"></p>
+    </div>
+
+    <!--bind() preserve 'this' being lost, when function used as callback-->
+    <div>
+      <h2>
+        bind() preserve 'this' being lost, when function used as callback.
+      </h2>
+      <p>
+        In the following example, the bind() method is used to bind
+        person.display to person. This example will display the person name
+        after 3 seconds:
+      </p>
+      <p id="bind-this"></p>
+    </div>
+
+    <!--Function Closure-->
+    <div>
+      <h2>Function Closure</h2>
+      <p>Counting with the local variable</p>
+      <button onclick="counter()">Count!</button>
+      <p id="func-clos"></p>
+    </div>
+
+    <script src="functions.js" async defer></script>
+  </body>
+</html>
