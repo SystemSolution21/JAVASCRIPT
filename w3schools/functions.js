@@ -10,11 +10,11 @@ const exFuncMultiply = function (a, b) {
 };
 console.log(exFuncMultiply(2, 3));
 
-// Arrow Function when single statement.
+// Arrow Function Expression when single statement.
 let arrFuncAdd = (a, b) => a + b;
 console.log(arrFuncAdd(4, 5));
 
-// Arrow Function when multiple statement.
+// Arrow Function Expression when multiple statement.
 let arrFuncMultiStat = (guest) => {
   console.log("Hello");
   return "Hello " + guest;
@@ -36,7 +36,7 @@ let arrFuncThis = () => {
 };
 // The window object calls the function. Owner of 'this' is window.
 window.addEventListener("load", arrFuncThis);
-// A button object calls the function. Owner if 'this' is window too.
+// A button object calls the function. Owner of 'this' is window too.
 document.getElementById("btn-arr-this").addEventListener("click", arrFuncThis);
 
 // Anonymous Self-invoking function.
@@ -70,8 +70,7 @@ function resPara(...args) {
 let x = resPara(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 document.getElementById("res-para").innerHTML = x;
 
-// Javascript built-in Arguments Object.
-
+// Javascript built-in "arguments" Object.
 // find maximum value in array.
 function findMax() {
   let max = -Infinity;
@@ -84,7 +83,7 @@ function findMax() {
 }
 let max = findMax(1, 123, 500, 115, 44, 88);
 console.log(
-  "Using built-in Arguments Object to find the maximum value in array: " + max
+  "Using built-in 'arguments' Object to find the maximum value in array: " + max
 );
 console.log(
   "Also using built-in Math.max() and apply() to find the maximum value in array: " +
@@ -100,7 +99,7 @@ function sumArray() {
 }
 let sum = sumArray(1, 123, 500, 115, 44, 88);
 console.log(
-  "Using built-in Arguments Object to sum all values of array: " + sum
+  "Using built-in 'arguments' Object to sum all values of array: " + sum
 );
 
 // All functions are methods.
@@ -111,7 +110,7 @@ const person1 = {
     return this.firstName + " " + this.lastName;
   },
 };
-document.getElementById("func-metd").innerHTML = person1.fullName();
+document.getElementById("func-meth").innerHTML = person1.fullName();
 
 // Predefined JavaScript call() method.
 const person = {
@@ -130,21 +129,21 @@ const person2 = {
   firstName: "Mary",
   lastName: "Smith",
 };
-document.getElementById("call-metd").innerHTML = person.fullName.call(person2);
+document.getElementById("call-meth").innerHTML = person.fullName.call(person2);
 
 // call() method with arguments.
-const newPerson = {
+const Person3 = {
   firstName: "Suzuki",
   lastName: "Take",
 };
-document.getElementById("cal-met-arg").innerHTML = person.details.call(
-  newPerson,
+document.getElementById("call-meth-arg").innerHTML = person.details.call(
+  Person3,
   "Tokyo",
   "Japan"
 );
 
 // apply() method with array arguments.
-document.getElementById("apl-met-ary").innerHTML = person.details.apply(
+document.getElementById("appl-meth-arry").innerHTML = person.details.apply(
   newPerson,
   ["Tokyo", "Japan"]
 );
