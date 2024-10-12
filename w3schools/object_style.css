@@ -1,0 +1,25 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div {
+  background-color: cadetblue;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 5px;
+  width: 100%;
+  height: auto;
+}
+
+h2 {
+  background-color: slategray;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 5px;
+}
+
+#obj-lit,
+#obj-con-fun {
+  font-size: 0.8em;
+  color: white;
+}
