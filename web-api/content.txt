@@ -1,0 +1,17 @@
+Javascript to read the content of a text file and display it in <p> element when the webpage loads.
+
+Features:
+
+1. <p> element with the id "content" where the text display.
+2. The `window.onload` event ensures the code runs after the page has fully loaded.
+3. `fetch` API to read the content of a file named 'content.txt'.
+4. Once the file is read, set the text content to <p> element InnerHtml.
+5. If there's an error (e.g., file not found), catch it and display an error message.
+
+To use this:
+
+1. Create index.html file
+2. Create a text file named `content.txt` in the same directory.
+3. Put the text to display in `content.txt`.
+4. Create 'web-api.js' for function to read text file using 'fetch' API
+5. Open the HTML file in a web browser.
