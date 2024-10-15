@@ -3,11 +3,13 @@ const displayContent = function () {
   fetch("content.txt")
     .then((response) => response.text())
     .then((data) => {
-      document.getElementById("content").textContent = data;
+      document.getElementById("content").innerHTML = data;
+      //document.getElementById("content").textContent = data;
     })
     .catch((error) => {
       console.error("Error:", error);
-      document.getElementById("content").textContent = "Error loading file";
+      document.getElementById("content").innerHTML = "Error loading file";
+      //document.getElementById("content").textContent = "Error loading file";
     });
 };
 
