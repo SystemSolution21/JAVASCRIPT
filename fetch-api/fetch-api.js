@@ -1,7 +1,7 @@
 // fetch API to read text file and display content
-// Display the text containing html elements
+// Display html contents
 const displayHtmlContent = function () {
-  fetch("html-content.txt")
+  fetch("html-content.html")
     .then((response) => response.text())
     .then((data) => {
       document.getElementById("html-content").innerHTML = data;
